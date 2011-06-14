@@ -1,4 +1,6 @@
 all: vim bash readline
+	git submodule init
+	git submodule update
 
 vim:
 	ln -s ~/dotfiles/vimrc ~/.vimrc
