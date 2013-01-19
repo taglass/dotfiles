@@ -1,16 +1,9 @@
-call pathogen#infect()
-call pathogen#helptags()
-filetype plugin indent on
 set nocompatible
-set hidden
-syntax on
-set background=dark
-colorscheme solarized
+filetype off
 
-autocmd FileType cpp setlocal ts=4 st=4 sw=4 tw=78 expandtab
-autocmd FileType c setlocal ts=4 st=4 sw=4  tw=78 expandtab
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
-autocmd BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
-au BufRead,BufNewFile *.vala            setfiletype vala
-au BufRead,BufNewFile *.vapi            setfiletype vala
+Bundle 'gmarik/vundle'
+
+filetype plugin indent on
